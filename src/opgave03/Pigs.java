@@ -43,7 +43,7 @@ public class Pigs {
                 sumPlayer1 += face;
             } else {
                 sumPlayer1 = 0;
-                System.out.println("Skriv Nej, så den anden kan spille, da du slog 1: ");
+                System.out.println("Skriv \"Nej\", så den anden kan spille, da du slog 1: ");
             }
 
             System.out.print("Rul en terning? ('ja/nej') ");
@@ -58,7 +58,7 @@ public class Pigs {
                         sumPlayer2 += face2;
                     } else {
                         sumPlayer2 = 0;
-                        System.out.println("Skriv Nej, så den anden kan spille, da du slog 1: ");
+                        System.out.println("Skriv \"Nej\", så den anden kan spille, da du slog 1: ");
                     }
 
                     System.out.print("Rul en terning? ('ja/nej') ");
