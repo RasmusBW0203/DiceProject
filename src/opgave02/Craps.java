@@ -1,3 +1,27 @@
+/*
+**Feedback til `Craps.java`**
+
+Hej,
+
+Godt gået med implementeringen af Craps! I har fanget spillets kerne-logik korrekt, med en fungerende "come out roll" og "point"-fase. Det er også godt at se, at I har implementeret bonusopgaverne, så man kan spille igen og se statistik.
+
+Hera er et par detaljer, I kan arbejde med for at forbedre koden yderligere:
+
+**Hvad der er godt:**
+
+*   **Korrekt spil-logik:** Spillets grundlæggende regler er implementeret korrekt.
+*   **God struktur:** Koden er pænt opdelt i metoder, der hver især har et klart ansvar.
+*   **Bonusopgaver:** I har løst bonusopgaverne, så spillet kan køres flere gange, og der vises statistik til sidst.
+
+**Forslag til forbedringer:**
+
+1.  **Navne-typo:** Metoden `playCrabs()` indeholder en lille skrivefejl og burde nok hedde `playCraps()`.
+2.  **Håndtering af `Scanner`:** `Scanner`-objektet bliver oprettet og lukket inde i `playCrabs()`-metoden. Det er bedre praksis at styre `Scanner`'en fra `main`-metoden for at undgå potentielle fejl, hvis programmet bliver mere komplekst.
+3.  **Tydeligere bruger-prompt:** Når et spil er slut, spørger I brugeren: `"Rul en terning? ('ja/nej') "`. Dette kan være forvirrende. En mere præcis prompt ville være `"Spil igen? ('ja/nej')"`, da brugeren starter et helt nyt spil.
+4.  **Output til konsol:** Både `rollDice()` og `rollForPoint()` skriver til konsollen. Overvej at lade metoder som `rollDice()` udelukkende returnere en værdi (summen eller de enkelte terningers øjne), og lad den kaldende metode (f.eks. `playCraps` eller `rollForPoint`) være ansvarlig for at printe output. Det kan give en renere adskillelse af logik og præsentation.
+
+Fortsæt det gode arbejde.
+*/
 package opgave02;
 
 import java.util.Scanner;

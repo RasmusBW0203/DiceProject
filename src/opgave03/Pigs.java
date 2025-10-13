@@ -1,3 +1,18 @@
+/*
+Denne fil er en implementering af terningspillet "Gris" (Pig).
+
+Efter at have gennemgået koden ser det ud til, at der er betydelige problemer med spillets kerne-logik. Den nuværende implementering følger ikke reglerne for Gris korrekt, hvad angår tur-baseret spil, pointgivning og vinderbetingelser.
+
+Her er en opsummering af problemerne:
+
+1.  **Fejlbehæftet spil-løkke:** Logikken for at skifte mellem Spiller 1 og Spiller 2 virker ikke efter hensigten. De indlejrede `while`-løkker og afhængigheden af, at brugeren skriver "nej", forhindrer et korrekt skift af tur.
+2.  **Forkert pointgivning:** Koden nulstiller en spillers *samlede score* til nul, når de slår en 1'er. Ifølge reglerne mister man kun de point, man har samlet *i den aktuelle runde*, ikke hele sin score. Konceptet om en midlertidig "runde-score" mangler.
+3.  **Manglende "hold"-funktion:** En central del af Gris er spillerens valg om at "holde" (stoppe med at rulle) for at gemme sine point fra runden. Dette er ikke implementeret tydeligt; spillet er afhængigt af, at brugeren skriver "nej", hvilket også bruges til at skifte spiller og afslutte spillet.
+4.  **Ingen vinderbetingelse:** Spillet tjekker ikke, om en spiller har nået 100 point for at kåre en vinder.
+5.  **Forvirrende import:** Der er en ubrugt og unødvendig import af `rollDie` fra en anden pakke.
+
+Kort sagt, spillets logik trænger til en fundamental omstrukturering for at virke korrekt.
+*/
 package opgave03;
 
 import java.util.Scanner;
